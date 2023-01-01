@@ -30,5 +30,18 @@ function carousel() {
 
     //working with buttons
 
+    if (counter < slides.length - 1) {
+        nextBtn.style.display = "block";
+    } else {
+        nextBtn.style.display = "none";
+    }
 
+    if (counter > 0) {
+        prevBtn.style.display = "block";
+    } else {
+        prevBtn.style.display = "none";
+    }
+    slides.forEach(function (slide) {
+        slide.style.transform = `translateX(-${counter * 100}%)`;
+    })
 }
